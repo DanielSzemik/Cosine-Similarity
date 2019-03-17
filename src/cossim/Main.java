@@ -26,8 +26,8 @@ public class Main {
 
 	public static double cosineSimilarity(String text1, String text2) {
 		// Zamienianie stringow na wektory
-		Map<String, Integer> a = getWordFrequencyMap(text1.split(" "));
-		Map<String, Integer> b = getWordFrequencyMap(text2.split(" "));
+		Map<String, Integer> a = getWordFrequencyMap(text1.split("[\\p{Punct}\\s]+"));
+		Map<String, Integer> b = getWordFrequencyMap(text2.split("[\\p{Punct}\\s]+"));
 
 		// Hashset zawiera unikatowe slowa wystepujace w oby dwoch stringach
 		HashSet<String> intersection = new HashSet<>(a.keySet());
