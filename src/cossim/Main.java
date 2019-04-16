@@ -25,6 +25,8 @@ public class Main {
 	}
 
 	public static double cosineSimilarity(String text1, String text2) {
+		text1 = text1.toLowerCase();
+		text2 = text2.toLowerCase();
 		// Zamienianie stringow na wektory
 		Map<String, Integer> a = getWordFrequencyMap(text1.split("[\\p{Punct}\\s]+"));
 		Map<String, Integer> b = getWordFrequencyMap(text2.split("[\\p{Punct}\\s]+"));
